@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.3" prefHeight="400" prefWidth="800"
-           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.example.bdsqltester.scenes.UserController">
+<SplitPane dividerPositions="0.3" prefHeight="400" prefWidth="800" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bdsqltester.scenes.UserController">
     <items>
-        <VBox spacing="8">
+        <VBox spacing="8" style="-fx-background-color: pink;">
             <padding>
-                <Insets top="8" right="8" bottom="8" left="8" />
+                <Insets bottom="8" left="8" right="8" top="8" />
             </padding>
             <children>
                 <Label text="Assignments" />
-                <ListView fx:id="assignmentList" VBox.vgrow="ALWAYS" />
+                <ListView fx:id="assignmentList" style="-fx-background-color: yellow;" VBox.vgrow="ALWAYS" />
             </children>
         </VBox>
 
-        <VBox spacing="8">
+        <VBox spacing="8" style="-fx-background-color: pink;">
             <padding>
-                <Insets top="8" right="8" bottom="8" left="8" />
+                <Insets bottom="8" left="8" right="8" top="8" />
             </padding>
             <children>
                 <GridPane hgap="10" vgap="8">
@@ -36,8 +43,7 @@
                         <Label text="ID:" />
                         <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" />
                         <Label text="Name:" GridPane.rowIndex="1" />
-                        <TextField fx:id="nameField" editable="false"
-                                   GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="nameField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
 
@@ -49,14 +55,14 @@
 
                 <Label fx:id="gradeLabel" text="Score: -" />
 
-                <HBox spacing="10" alignment="CENTER_RIGHT">
+                <HBox alignment="CENTER_RIGHT" spacing="10">
                     <children>
-                        <Button text="Test" onAction="#onTestButtonClick" />
-                        <Button text="Submit" onAction="#onSubmitClick" />
+                        <Button onAction="#onTestButtonClick" text="Test" />
+                        <Button onAction="#onSubmitClick" text="Submit" />
                     </children>
                 </HBox>
 
-                <TextArea fx:id="answerKeyField" visible="false" managed="false" />
+                <TextArea fx:id="answerKeyField" managed="false" visible="false" />
             </children>
         </VBox>
     </items>
