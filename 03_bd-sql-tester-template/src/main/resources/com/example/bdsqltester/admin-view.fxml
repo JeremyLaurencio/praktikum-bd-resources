@@ -15,27 +15,32 @@
 
 <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bdsqltester.scenes.admin.AdminController">
    <items>
-      <VBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: SILVER;">
+      <VBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: pink;">
          <children>
-            <Button mnemonicParsing="false" onAction="#onNewAssignmentClick" style="-fx-background-color: MAGENTA;" text="New Assignment" textFill="#0044ff" />
-            <ListView fx:id="assignmentList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: YELLOW;">
+            <Button mnemonicParsing="false" onAction="#onNewAssignmentClick" style="-fx-background-color: Green;" text="New Assignment" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#onDeleteAssignmentClick" style="-fx-background-color: red;" text="Delete Assignment" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <ListView fx:id="assignmentList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: silver;">
                <VBox.margin>
                   <Insets top="8.0" />
                </VBox.margin>
             </ListView>
          </children>
       </VBox>
-      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: PINK;">
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: pink;">
          <children>
             <GridPane>
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="48.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="48.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
                   <Label maxHeight="1.7976931348623157E308" text="ID" />
                   <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -61,10 +66,10 @@
                   <Insets top="8.0" />
                </VBox.margin>
                <children>
-                  <Button mnemonicParsing="false" onAction="#onShowGradesClick" style="-fx-background-color: CYAN;" text="Show Grades" />
+                  <Button mnemonicParsing="false" onAction="#onShowGradesClick" style="-fx-background-color: cyan;" text="Show Grades" />
                   <HBox HBox.hgrow="ALWAYS" />
-                  <Button mnemonicParsing="false" onAction="#onTestButtonClick" style="-fx-background-color: YELLOW;" text="Test" />
-                  <Button mnemonicParsing="false" onAction="#onSaveClick" style="-fx-background-color: YELLOW;" text="Save" />
+                  <Button mnemonicParsing="false" onAction="#onTestButtonClick" style="-fx-background-color: blue;" text="Test" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#onSaveClick" style="-fx-background-color: green;" text="Save" textFill="#e4e4e4" />
                </children>
             </HBox>
          </children>
